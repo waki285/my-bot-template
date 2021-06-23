@@ -1,0 +1,33 @@
+{
+  "name": "discord-js-bot",
+  "version": "1.0.0",
+  "description": "discord.jsのBot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waki285/my-bot-template.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "すずねーう",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waki285/my-bot-template/issues"
+  },
+  "homepage": "https://github.com/waki285/my-bot-template#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "@keyv/sqlite": "^2.0.2",
+    "discord-reply": "^0.1.2",
+    "discord.js": "^12.5.3",
+    "discord.js-buttons": "^1.0.0",
+    "ffmpeg-static": "^4.4.0",
+    "keyv": "^4.0.3",
+    "node-fetch": "^2.6.1",
+    "sqlite3": "^5.0.2"
+  }
+}
