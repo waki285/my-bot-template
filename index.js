@@ -13,7 +13,7 @@ const http = require("http");
 http.createServer(function (req, res) {
   res.write("OK");
   res.end();
-});
+}).listen(8080);
 
 client.once('ready', async () => {
   console.log("ready!(User=" + client.user.tag + ")");
