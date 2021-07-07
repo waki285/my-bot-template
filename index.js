@@ -47,3 +47,8 @@ if (!process.env.token) {
 }
 
 client.login(process.env.token)
+.then(() => {})
+.catch(() => {
+  logger.fatal("TOKENがないで");
+  throw new Error("INVALID_TOKEN")
+})
