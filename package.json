@@ -29,6 +29,7 @@
     "ffmpeg-static": "^4.4.0",
     "keyv": "^4.0.3",
     "node-fetch": "^2.6.1",
+    "signale": "^1.4.0",
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {}

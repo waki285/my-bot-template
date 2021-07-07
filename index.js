@@ -6,8 +6,9 @@ const disbtn = require("discord.js-buttons")(client);
 const fetch = require("node-fetch");
 const Keyv = require("keyv");
 //const prefixes = new Keyv("sqlite://db.sqlite", { table: "prefixes" });
-
+const { Signale } = require("signale");
 const prefix = "!";
+const logger = new Signale({ scope: "Discord" });
 
 const http = require("http");
 http.createServer(function (req, res) {
@@ -16,7 +17,7 @@ http.createServer(function (req, res) {
 }).listen(8080);
 
 client.once('ready', async () => {
-  console.log("ready!(User=" + client.user.tag + ")");
+  logger.success("ready!(User=" + client.user.tag + ")");
   client.user.setPresence({ activity: { name: "Bot" }, status: "online" });
 });
 
@@ -40,4 +41,14 @@ client.on('message', async message => {
   }
 });
 
+if (!process.env.token) {
+  logger.fatal("TOKENがないで");
+  throw new Error("INVALID_TOKEN")
+}
+
 client.login(process.env.token)
+.then(() => {})
+.catch(() => {
+  logger.fatal("TOKENがないで");
+  throw new Error("INVALID_TOKEN")
+})
