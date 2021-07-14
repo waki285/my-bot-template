@@ -9,6 +9,7 @@ const Keyv = require("keyv");
 const { Signale } = require("signale");
 const prefix = "!";
 const logger = new Signale({ scope: "Discord" });
+const fs = require("fs");
 
 const http = require("http");
 http.createServer(function (req, res) {
@@ -22,6 +23,7 @@ client.once('ready', async () => {
 });
 
 client.on('message', async message => {
+  if (message.author.bot || message.system) return;
   if (!message.content.startsWith(prefix)) return;
   const args = message.content
     .slice(prefix.length)
