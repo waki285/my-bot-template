@@ -30,7 +30,7 @@
     "keyv": "^4.0.3",
     "node-fetch": "^2.6.7",
     "signale": "^1.4.0",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.3"
   },
   "devDependencies": {}
 }
