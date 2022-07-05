@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/waki285/my-bot-template#readme",
   "dependencies": {
-    "@discordjs/opus": "^0.5.3",
+    "@discordjs/opus": "^0.8.0",
     "@discordjs/voice": "^0.5.0",
     "@keyv/sqlite": "^2.0.2",
     "discord-reply": "^0.1.2",
